@@ -230,20 +230,17 @@ seed
 electrum_privkey(seed, 0)
 electrum_privkey(seed, 300, 0)
 electrum_privkey(seed, 0, 1)
-
-
-
-
-
-
-
-
-
-
-
 ```
 
-```
+```sh
+cryptotool bip32_master_key xxx
+cryptotool sha256 'some big long brainwallet password' | pybtctool -s privtoaddr | pybtctool -s histroy
+cryptotool sha256 123 | pybtctool -s changebase 16 256 | pybtctool -b changebase 256 16
+cryptotool unspent xxx | pybtctool -j select 20000001 | pybtctool -j mksend xxx 1000 | pybtctool -s signall xxx
+cryptotool unspent xxx --testnet
+cryptotool unspent xxx --coin ltc
+ctyptotool unspent xxx --coin ltc --testnet
+cryptotool send xxx xxx 999950000 --fee 50000 --coin bch --testnet
 ```
 
 ```
